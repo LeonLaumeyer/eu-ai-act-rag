@@ -126,7 +126,7 @@ I checked 6 of the 52 judged answers by hand and agreed with the judge on all of
 
 The questions were written and their gold labels checked against the parsed text before the first retrieval run, and they were not changed afterwards. Loading the file fails if a gold label does not exist in the parsed Act.
 
-Limits of this set: it is small, so the confidence intervals are wide; the gold labels come from one annotator; and the questions were written by the same person who built the system.
+Limits of this set: it is small, so the confidence intervals are wide; the questions and gold labels were drafted with an AI assistant (Claude Opus 5.5) and reviewed by me, with no second human annotator.
 
 ## Quickstart
 
