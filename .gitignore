@@ -1,0 +1,10 @@
+CELEX*/
+venv/
+__pycache__/
+*.egg-info/
+.pytest_cache/
+qdrant_data/
+data/embeddings/
+notes/
+.ruff_cache/
+.env

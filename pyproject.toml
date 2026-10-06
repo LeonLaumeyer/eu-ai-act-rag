@@ -1,0 +1,57 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "aiact-rag"
+version = "0.1.0"
+description = "Bilingual RAG system over the EU AI Act with hybrid retrieval and evaluation"
+requires-python = ">=3.11"
+dependencies = [
+    # ingest
+    "beautifulsoup4",
+    "lxml",
+    # embeddings, reranking, tokenizer
+    "transformers",
+    "sentence-transformers",
+    "FlagEmbedding",
+    "torch",
+    "numpy",
+    # retrieval
+    "qdrant-client",
+    "rank-bm25",
+    "PyStemmer",
+    # LLMs and API
+    "httpx",
+    "anthropic",
+    "google-genai",
+    "fastapi",
+    "uvicorn[standard]",
+    "pydantic",
+    "python-dotenv",
+    "pyyaml",
+]
+
+[project.optional-dependencies]
+dev = ["pytest", "ruff"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-m 'not slow'"
+markers = ["slow: loads a real model (run with: pytest -m slow)"]
+
+[tool.ruff]
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]
+ignore = ["E501", "B905"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["aiact_rag", "helpers"]
+
+[tool.ruff.lint.per-file-ignores]
+"src/aiact_rag/ingest/parse.py" = ["B023"]
