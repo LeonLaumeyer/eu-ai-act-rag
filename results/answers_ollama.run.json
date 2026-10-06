@@ -1,0 +1,1 @@
+{"model": "gemma-4-e2b", "judge": "gemini-3.1-flash-lite", "chunking": "article", "mode": "dense", "rerank": true, "top_k": 5}
