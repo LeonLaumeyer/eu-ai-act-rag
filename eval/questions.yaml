@@ -1,0 +1,333 @@
+# Evaluation questions for the EU AI Act RAG system.
+#
+# gold: unit ids from data/processed/units_*.jsonl. A retrieved chunk counts as a
+#       hit if it covers ANY gold unit; recall uses ALL of them.
+# type: factual | definition | cross_reference | procedural | trick
+# Questions with `answerable: false` are not answered by the Act and have no gold.
+# pair: marks a question that also exists in the other language (same meaning).
+
+# ---------------------------------------------------------------- English
+- id: q001
+  lang: en
+  type: factual
+  pair: p01
+  question: "Which uses of AI are completely banned?"
+  gold: [art5-1]
+- id: q002
+  lang: en
+  type: factual
+  question: "May a company use AI to work out how its employees are feeling at work?"
+  gold: [art5-1]
+- id: q003
+  lang: en
+  type: cross_reference
+  pair: p02
+  question: "When does an AI tool for selecting job applicants count as high-risk?"
+  gold: [anx3-4, art6-2]
+- id: q004
+  lang: en
+  type: definition
+  pair: p03
+  question: "What does the regulation mean by a 'deployer'?"
+  gold: [art3-p4]
+- id: q005
+  lang: en
+  type: definition
+  question: "How is an 'AI system' defined?"
+  gold: [art3-p1]
+- id: q006
+  lang: en
+  type: definition
+  question: "What is a 'deep fake' in the sense of the regulation?"
+  gold: [art3-p60]
+- id: q007
+  lang: en
+  type: definition
+  question: "What counts as a 'serious incident'?"
+  gold: [art3-p49]
+- id: q008
+  lang: en
+  type: factual
+  pair: p04
+  question: "How large can the fine be for using a forbidden AI practice?"
+  gold: [art99-3]
+- id: q009
+  lang: en
+  type: factual
+  question: "What penalty applies when a company gives wrong or misleading information to the authorities?"
+  gold: [art99-5]
+- id: q010
+  lang: en
+  type: factual
+  question: "Are fines lower for small companies and start-ups?"
+  gold: [art99-6]
+- id: q011
+  lang: en
+  type: factual
+  pair: p05
+  question: "From which date do the rules generally apply?"
+  gold: [art113]
+- id: q012
+  lang: en
+  type: factual
+  question: "When do the obligations for general-purpose AI models start to apply?"
+  gold: [art113]
+- id: q013
+  lang: en
+  type: procedural
+  pair: p06
+  question: "Do people have to be told that they are chatting with a machine?"
+  gold: [art50-1]
+- id: q014
+  lang: en
+  type: procedural
+  question: "What must someone do who publishes a manipulated video that looks real?"
+  gold: [art50-4]
+- id: q015
+  lang: en
+  type: procedural
+  question: "Does machine-generated text or imagery have to be marked as artificial?"
+  gold: [art50-2]
+- id: q016
+  lang: en
+  type: factual
+  pair: p07
+  question: "At what amount of training compute is a general-purpose model presumed to pose a systemic risk?"
+  gold: [art51-2]
+- id: q017
+  lang: en
+  type: procedural
+  question: "What must the makers of general-purpose AI models document and pass on to others?"
+  gold: [art53-1]
+- id: q018
+  lang: en
+  type: factual
+  question: "Are open-source general-purpose models exempt from some of the provider duties?"
+  gold: [art53-2]
+- id: q019
+  lang: en
+  type: procedural
+  question: "What extra duties apply to providers of models with systemic risk?"
+  gold: [art55-1]
+- id: q020
+  lang: en
+  type: factual
+  question: "Can a system from the Annex III list escape the high-risk label?"
+  gold: [art6-3]
+- id: q021
+  lang: en
+  type: procedural
+  pair: p08
+  question: "How long must users of high-risk systems store the automatically recorded logs?"
+  gold: [art26-6]
+- id: q022
+  lang: en
+  type: procedural
+  question: "Does an employer have to tell staff before introducing a high-risk AI system at work?"
+  gold: [art26-7]
+- id: q023
+  lang: en
+  type: procedural
+  question: "Who has to assess the impact on fundamental rights before using a high-risk system?"
+  gold: [art27-1]
+- id: q024
+  lang: en
+  type: factual
+  question: "What does the Act require so that humans can supervise high-risk systems?"
+  gold: [art14-1, art14-2, art14-3, art14-4]
+- id: q025
+  lang: en
+  type: factual
+  question: "What quality standards apply to the data used to train high-risk AI?"
+  gold: [art10-2, art10-3]
+- id: q026
+  lang: en
+  type: procedural
+  pair: p09
+  question: "Within how many days must a serious incident be reported?"
+  gold: [art73-2]
+- id: q027
+  lang: en
+  type: factual
+  pair: p10
+  question: "Does the regulation cover AI that is used only for military purposes?"
+  gold: [art2-3]
+- id: q028
+  lang: en
+  type: factual
+  question: "Am I bound by the Act if I use an AI tool privately, as a hobby?"
+  gold: [art2-10]
+- id: q029
+  lang: en
+  type: factual
+  question: "Can a person demand an explanation of a decision that was made with the help of a high-risk AI system?"
+  gold: [art86-1]
+- id: q030
+  lang: en
+  type: factual
+  question: "Must every Member State offer a regulatory sandbox for AI, and by when?"
+  gold: [art57-1]
+- id: q031
+  lang: en
+  type: factual
+  question: "What must companies do about the AI knowledge of their staff?"
+  gold: [art4]
+- id: q032
+  lang: en
+  type: cross_reference
+  question: "Is AI that rates the creditworthiness of people high-risk?"
+  gold: [anx3-5, art6-2]
+- id: q033
+  lang: en
+  type: factual
+  question: "What fine can the Commission impose on providers of general-purpose AI models?"
+  gold: [art101-1]
+
+# ---------------------------------------------------------------- German
+- id: q034
+  lang: de
+  type: factual
+  pair: p01
+  question: "Welche KI-Anwendungen sind vollständig untersagt?"
+  gold: [art5-1]
+- id: q035
+  lang: de
+  type: cross_reference
+  pair: p02
+  question: "Wann gilt ein KI-Werkzeug zur Auswahl von Bewerbern als hochriskant?"
+  gold: [anx3-4, art6-2]
+- id: q036
+  lang: de
+  type: definition
+  pair: p03
+  question: "Was versteht die Verordnung unter einem 'Betreiber'?"
+  gold: [art3-p4]
+- id: q037
+  lang: de
+  type: definition
+  question: "Wie ist ein 'Anbieter' definiert?"
+  gold: [art3-p3]
+- id: q038
+  lang: de
+  type: factual
+  pair: p04
+  question: "Wie hoch kann die Geldbuße für den Einsatz einer verbotenen KI-Praxis ausfallen?"
+  gold: [art99-3]
+- id: q039
+  lang: de
+  type: factual
+  pair: p05
+  question: "Ab welchem Datum gelten die Vorschriften allgemein?"
+  gold: [art113]
+- id: q040
+  lang: de
+  type: procedural
+  pair: p06
+  question: "Müssen Menschen erfahren, dass sie mit einer Maschine chatten?"
+  gold: [art50-1]
+- id: q041
+  lang: de
+  type: factual
+  pair: p07
+  question: "Ab welcher Rechenleistung beim Training wird bei einem Modell mit allgemeinem Verwendungszweck ein systemisches Risiko vermutet?"
+  gold: [art51-2]
+- id: q042
+  lang: de
+  type: procedural
+  pair: p08
+  question: "Wie lange müssen Nutzer von Hochrisiko-Systemen die automatisch aufgezeichneten Protokolle speichern?"
+  gold: [art26-6]
+- id: q043
+  lang: de
+  type: procedural
+  pair: p09
+  question: "Innerhalb wie vieler Tage muss ein schwerwiegender Vorfall gemeldet werden?"
+  gold: [art73-2]
+- id: q044
+  lang: de
+  type: factual
+  pair: p10
+  question: "Erfasst die Verordnung KI, die nur für militärische Zwecke eingesetzt wird?"
+  gold: [art2-3]
+- id: q045
+  lang: de
+  type: procedural
+  question: "Was müssen Importeure prüfen, bevor sie ein Hochrisiko-KI-System in der EU verkaufen?"
+  gold: [art23-1]
+- id: q046
+  lang: de
+  type: factual
+  question: "Was verlangt die Verordnung zur Genauigkeit und zur IT-Sicherheit von Hochrisiko-KI?"
+  gold: [art15-1]
+- id: q047
+  lang: de
+  type: procedural
+  question: "Müssen Hochrisiko-KI-Systeme vor dem Verkauf in eine EU-Datenbank eingetragen werden?"
+  gold: [art49-1]
+- id: q048
+  lang: de
+  type: definition
+  question: "Was ist ein KI-Reallabor?"
+  gold: [art3-p55]
+- id: q049
+  lang: de
+  type: cross_reference
+  question: "Ist KI, die Prüfungsleistungen von Schülern bewertet, hochriskant?"
+  gold: [anx3-3, art6-2]
+- id: q050
+  lang: de
+  type: factual
+  question: "Wer darf sich bei einer Marktüberwachungsbehörde beschweren?"
+  gold: [art85]
+- id: q051
+  lang: de
+  type: factual
+  question: "Darf die Polizei Gesichtserkennung in Echtzeit auf öffentlichen Plätzen einsetzen?"
+  gold: [art5-1, art5-2]
+- id: q052
+  lang: de
+  type: procedural
+  question: "Welche Unterlagen muss der Hersteller eines Hochrisiko-KI-Systems vor dem Verkauf erstellen?"
+  gold: [art11-1]
+
+# ---------------------------------------------------------------- Not answered by the Act
+- id: q053
+  lang: en
+  type: trick
+  answerable: false
+  question: "What fines does the AI Act set for violations of the GDPR?"
+- id: q054
+  lang: en
+  type: trick
+  answerable: false
+  question: "Which AI systems does Article 6 prohibit?"
+- id: q055
+  lang: en
+  type: trick
+  answerable: false
+  question: "What minimum salary must an AI compliance officer be paid?"
+- id: q056
+  lang: en
+  type: trick
+  answerable: false
+  question: "How does the Act regulate the mining of cryptocurrencies?"
+- id: q057
+  lang: en
+  type: trick
+  answerable: false
+  question: "Which authority supervises AI in Austria according to the Act?"
+- id: q058
+  lang: de
+  type: trick
+  answerable: false
+  question: "Welche Steuervergünstigungen sieht die Verordnung für KI-Start-ups vor?"
+- id: q059
+  lang: de
+  type: trick
+  answerable: false
+  question: "Wie viele Parameter darf ein KI-Modell laut Verordnung höchstens haben?"
+- id: q060
+  lang: de
+  type: trick
+  answerable: false
+  question: "Welche Strafen sieht die Verordnung für Urheberrechtsverletzungen in den USA vor?"

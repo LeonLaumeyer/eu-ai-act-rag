@@ -1,0 +1,11 @@
+# config.yaml
+llm:
+  provider: ollama            # ollama | anthropic | gemini
+  ollama:  { base_url: "http://localhost:11434", model: "gemma-4-e2b" }
+  anthropic: { model: "claude-sonnet-5", max_tokens: 1024 }   # key: ANTHROPIC_API_KEY
+  gemini: { model: "gemini-3.1-flash-lite", min_interval: 4 }   # key: GEMINI_API_KEY; 4 s between requests = 15 per minute
+retrieval:
+  chunking: article           # article | fixed
+  mode: dense                # dense | bm25 | hybrid
+  rerank: true
+  top_k: 5
